@@ -4,11 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ICDT - International Center of Digital Transformation</title>
+    <!-- Стили -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/17.0.2/umd/react.production.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/17.0.2/umd/react-dom.production.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/recharts/2.1.12/Recharts.js"></script>
+    <!-- React и зависимости -->
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/recharts@2.1.12/umd/Recharts.js"></script>
 </head>
 <body class="bg-gray-50">
     <!-- Навигация -->
@@ -118,6 +120,7 @@
         </div>
     </section>
 
+    <!-- Загрузка скриптов -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script>
         AOS.init({
@@ -125,11 +128,23 @@
             once: true
         });
     </script>
-    <script src="js/assessment.js"></script>
+    <script src="./js/assessment.js"></script>
     <script>
-        // Рендерим React-компонент оценки
-        const assessment = document.getElementById('assessment-root');
-        ReactDOM.render(React.createElement(DigitalMaturityAssessment), assessment);
+        window.addEventListener('load', function() {
+            try {
+                console.log('Checking assessment component:', window.DigitalMaturityAssessment);
+                console.log('Checking root element:', document.getElementById('assessment-root'));
+                
+                const assessment = document.getElementById('assessment-root');
+                if (assessment && window.DigitalMaturityAssessment) {
+                    ReactDOM.render(React.createElement(DigitalMaturityAssessment), assessment);
+                } else {
+                    console.warn('Assessment component or root element not found');
+                }
+            } catch (error) {
+                console.error('Error initializing assessment:', error);
+            }
+        });
     </script>
 </body>
 </html>
