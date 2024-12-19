@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ICDT - International Center of Digital Transformation</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50">
+    <!-- Навигация -->
+    <nav class="bg-white shadow-lg fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <div class="text-2xl font-bold text-blue-600">ICDT</div>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#services" class="text-gray-700 hover:text-blue-600">Услуги</a>
+                    <a href="#cases" class="text-gray-700 hover:text-blue-600">Кейсы</a>
+                    <a href="#expertise" class="text-gray-700 hover:text-blue-600">Экспертиза</a>
+                    <a href="#contact" class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700">
+                        Связаться
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Главный экран -->
+    <header class="pt-32 pb-20 px-4">
+        <div class="max-w-7xl mx-auto text-center">
+            <h1 class="text-5xl font-bold text-gray-900 mb-8" data-aos="fade-up">
+                Цифровая трансформация вашего бизнеса
+            </h1>
+            <p class="text-xl text-gray-600 mb-12 max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="200">
+                Помогаем компаниям внедрять цифровые технологии и оптимизировать бизнес-процессы для достижения максимальной эффективности
+            </p>
+            <div data-aos="fade-up" data-aos-delay="400">
+                <a href="#contact" class="bg-blue-600 text-white px-8 py-4 rounded-lg text-lg hover:bg-blue-700 transition">
+                    Начать трансформацию
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Статистика -->
+    <section class="py-20 bg-blue-600 text-white">
+        <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+            <div data-aos="fade-up">
+                <div class="text-4xl font-bold mb-2">100+</div>
+                <div>Успешных проектов</div>
+            </div>
+            <div data-aos="fade-up" data-aos-delay="200">
+                <div class="text-4xl font-bold mb-2">50+</div>
+                <div>Экспертов</div>
+            </div>
+            <div data-aos="fade-up" data-aos-delay="400">
+                <div class="text-4xl font-bold mb-2">15</div>
+                <div>Стран присутствия</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Услуги -->
+    <section id="services" class="py-20 px-4">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-4xl font-bold text-center mb-16" data-aos="fade-up">Наши услуги</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-lg shadow-lg" data-aos="fade-up">
+                    <h3 class="text-xl font-bold mb-4">Аудит цифровой зрелости</h3>
+                    <p class="text-gray-600">Оценка текущего уровня цифровизации и потенциала развития</p>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-lg" data-aos="fade-up" data-aos-delay="200">
+                    <h3 class="text-xl font-bold mb-4">Разработка стратегии</h3>
+                    <p class="text-gray-600">Создание подробного плана цифровой трансформации</p>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-lg" data-aos="fade-up" data-aos-delay="400">
+                    <h3 class="text-xl font-bold mb-4">Внедрение решений</h3>
+                    <p class="text-gray-600">Реализация проектов цифровой трансформации</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Форма контакта -->
+    <section id="contact" class="py-20 bg-gray-100 px-4">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="text-4xl font-bold text-center mb-16" data-aos="fade-up">Свяжитесь с нами</h2>
+            <form class="bg-white p-8 rounded-lg shadow-lg" data-aos="fade-up">
+                <div class="mb-6">
+                    <input type="text" placeholder="Ваше имя" class="w-full px-4 py-3 rounded-lg border">
+                </div>
+                <div class="mb-6">
+                    <input type="email" placeholder="Email" class="w-full px-4 py-3 rounded-lg border">
+                </div>
+                <div class="mb-6">
+                    <textarea placeholder="Сообщение" class="w-full px-4 py-3 rounded-lg border" rows="4"></textarea>
+                </div>
+                <button class="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700">
+                    Отправить
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+    </script>
+</body>
+</html>
