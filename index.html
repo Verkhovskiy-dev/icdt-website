@@ -6,9 +6,10 @@
     <title>ICDT - International Center of Digital Transformation</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/react/17.0.2/umd/react.production.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/17.0.2/umd/react-dom.production.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/recharts/2.1.12/Recharts.js"></script></head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/17.0.2/umd/react.production.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/17.0.2/umd/react-dom.production.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/recharts/2.1.12/Recharts.js"></script>
+</head>
 <body class="bg-gray-50">
     <!-- Навигация -->
     <nav class="bg-white shadow-lg fixed w-full z-50">
@@ -40,8 +41,8 @@
                 Помогаем компаниям внедрять цифровые технологии и оптимизировать бизнес-процессы для достижения максимальной эффективности
             </p>
             <div data-aos="fade-up" data-aos-delay="400">
-                <a href="#contact" class="bg-blue-600 text-white px-8 py-4 rounded-lg text-lg hover:bg-blue-700 transition">
-                    Начать трансформацию
+                <a href="#assessment" class="bg-blue-600 text-white px-8 py-4 rounded-lg text-lg hover:bg-blue-700 transition">
+                    Оценить цифровую зрелость
                 </a>
             </div>
         </div>
@@ -86,16 +87,18 @@
         </div>
     </section>
 
-   <!-- Оценка цифровой зрелости -->
-<section id="assessment" class="py-20 px-4 bg-gray-100">
-    <div class="max-w-7xl mx-auto">
-        <h2 class="text-4xl font-bold text-center mb-16" data-aos="fade-up">
-            Оценка цифровой зрелости
-        </h2>
-        <div id="assessment-root"></div>
-    </div>
-</section> <!-- Форма контакта -->
-    <section id="contact" class="py-20 bg-gray-100 px-4">
+    <!-- Оценка цифровой зрелости -->
+    <section id="assessment" class="py-20 px-4 bg-gray-100">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-4xl font-bold text-center mb-16" data-aos="fade-up">
+                Оценка цифровой зрелости
+            </h2>
+            <div id="assessment-root"></div>
+        </div>
+    </section>
+
+    <!-- Форма контакта -->
+    <section id="contact" class="py-20 px-4">
         <div class="max-w-3xl mx-auto">
             <h2 class="text-4xl font-bold text-center mb-16" data-aos="fade-up">Свяжитесь с нами</h2>
             <form class="bg-white p-8 rounded-lg shadow-lg" data-aos="fade-up">
@@ -122,10 +125,11 @@
             once: true
         });
     </script>
-<script src="js/assessment.js"></script>
-<script>
-    // Рендерим React-компонент оценки
-    const assessment = document.getElementById('assessment-root');
-    ReactDOM.render(React.createElement(DigitalMaturityAssessment), assessment);
-</script></body>
+    <script src="js/assessment.js"></script>
+    <script>
+        // Рендерим React-компонент оценки
+        const assessment = document.getElementById('assessment-root');
+        ReactDOM.render(React.createElement(DigitalMaturityAssessment), assessment);
+    </script>
+</body>
 </html>
