@@ -227,6 +227,3 @@ const DigitalMaturityAssessment = () => {
 };
 
 window.DigitalMaturityAssessment = DigitalMaturityAssessment;
-```
-
-После того, как убедитесь, что этот код на месте, приступим к проверке index.html. Готовы продолжить?
