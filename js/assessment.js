@@ -129,17 +129,14 @@ const DigitalMaturityAssessment = () => {
   };
 
   const calculateResults = () => {
-    // Вычисляем средние значения по категориям
     const calcAverage = (values) => {
       return values.reduce((a, b) => a + b, 0) / values.length;
     };
 
-    // Получаем значения по категориям
     const digitalAssetValues = [answers[1], answers[2]];
     const processesValues = [answers[3], answers[4]];
     const cultureValues = [answers[5], answers[6]];
 
-    // Формируем данные для радарной диаграммы
     const transformedData = [
       {
         subject: 'Цифровой актив',
