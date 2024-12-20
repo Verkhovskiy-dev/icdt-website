@@ -1,6 +1,3 @@
-Давайте проверим содержимое файла js/assessment.js. Нажмите на папку js, затем на файл assessment.js. Там должен быть следующий код. Если содержимое отличается, вы можете нажать на кнопку редактирования (иконка карандаша) и заменить его на этот код:
-
-```javascript
 const DigitalMaturityAssessment = () => {
   const [currentStep, setCurrentStep] = React.useState(0);
   const [answers, setAnswers] = React.useState({});
