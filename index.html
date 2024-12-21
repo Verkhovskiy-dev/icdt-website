@@ -128,14 +128,13 @@
             once: true
         });
     </script>
-    <script src="/icdt-website/js/assessment.js"></script>
+    <script src="js/assessment.js"></script>
     <script>
         window.addEventListener('load', function() {
             try {
                 const assessment = document.getElementById('assessment-root');
                 if (assessment && window.DigitalMaturityAssessment) {
                     ReactDOM.render(React.createElement(DigitalMaturityAssessment), assessment);
-                    console.log('Assessment component rendered successfully');
                 } else {
                     console.warn('Assessment component or root element not found');
                 }
