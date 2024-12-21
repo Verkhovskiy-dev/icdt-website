@@ -1,8 +1,11 @@
 const DigitalMaturityAssessment = () => {
+  const { RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, Radar, Legend } = Recharts;
   const [currentStep, setCurrentStep] = React.useState(0);
   const [answers, setAnswers] = React.useState({});
   const [showResults, setShowResults] = React.useState(false);
   const [radarData, setRadarData] = React.useState([]);
+
+  console.log('DigitalMaturityAssessment initialized');
 
   const questions = [
     {
@@ -166,21 +169,20 @@ const DigitalMaturityAssessment = () => {
 
     setRadarData(transformedData);
     setShowResults(true);
-    console.log('Results calculated:', transformedData);
   };
 
   const ResultsView = () => (
     <div className="space-y-8">
       <div className="flex justify-center">
-        <Recharts.RadarChart width={500} height={400} data={radarData}>
-          <Recharts.PolarGrid />
-          <Recharts.PolarAngleAxis dataKey="subject" />
-          <Recharts.PolarRadiusAxis angle={30} domain={[0, 5]} />
-          <Recharts.Radar name="Less Money" dataKey="Less Money" stroke="#8884d8" fill="#8884d8" fillOpacity={0.6} />
-          <Recharts.Radar name="More Money" dataKey="More Money" stroke="#82ca9d" fill="#82ca9d" fillOpacity={0.6} />
-          <Recharts.Radar name="New Money" dataKey="New Money" stroke="#ffc658" fill="#ffc658" fillOpacity={0.6} />
-          <Recharts.Legend />
-        </Recharts.RadarChart>
+        <RadarChart width={500} height={400} data={radarData}>
+          <PolarGrid />
+          <PolarAngleAxis dataKey="subject" />
+          <PolarRadiusAxis angle={30} domain={[0, 5]} />
+          <Radar name="Less Money" dataKey="Less Money" stroke="#8884d8" fill="#8884d8" fillOpacity={0.6} />
+          <Radar name="More Money" dataKey="More Money" stroke="#82ca9d" fill="#82ca9d" fillOpacity={0.6} />
+          <Radar name="New Money" dataKey="New Money" stroke="#ffc658" fill="#ffc658" fillOpacity={0.6} />
+          <Legend />
+        </RadarChart>
       </div>
       <div className="text-center">
         <button 
