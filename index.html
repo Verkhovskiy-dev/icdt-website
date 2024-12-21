@@ -7,7 +7,7 @@
     <!-- Стили -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
-    <!-- React и зависимости -->
+    <!-- Зависимости React -->
     <script crossorigin src="https://unpkg.com/react@17.0.2/umd/react.production.min.js"></script>
     <script crossorigin src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.production.min.js"></script>
     <script crossorigin src="https://cdnjs.cloudflare.com/ajax/libs/recharts/2.1.12/Recharts.min.js"></script>
@@ -120,7 +120,7 @@
         </div>
     </section>
 
-    <!-- Загрузка скриптов -->
+    <!-- Скрипты -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script>
         AOS.init({
@@ -132,12 +132,10 @@
     <script>
         window.addEventListener('load', function() {
             try {
-                console.log('Checking assessment component:', window.DigitalMaturityAssessment);
-                console.log('Checking root element:', document.getElementById('assessment-root'));
-                
                 const assessment = document.getElementById('assessment-root');
                 if (assessment && window.DigitalMaturityAssessment) {
                     ReactDOM.render(React.createElement(DigitalMaturityAssessment), assessment);
+                    console.log('Assessment component rendered successfully');
                 } else {
                     console.warn('Assessment component or root element not found');
                 }
